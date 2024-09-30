@@ -1,0 +1,126 @@
+* {
+    box-sizing: border-box;
+    font-family: "Poppins" sans-serif;
+}
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(#4F7959, #A6B697);
+    padding: 10px;
+
+}
+.to-do {
+    width: 100%;
+    max-width: 540px;
+    background: #f0ddcd;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+.to-do h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #33212A;
+    margin-bottom: 30px;
+}
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(198, 188, 188);
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 14px;
+}
+button {
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: #4F7959;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+ul li {
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(/unchecked_icon.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+ul li.checked {
+    color: #555;
+    text-decoration: line-through;
+}
+ul li.checked::before {
+    background-image: url(/checked_icon.png); 
+}
+ul li span {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    height: 40px;
+    width: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+ul li span:hover {
+    background: #edeef0;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+footer h2 {
+    font-size: 1.2rem;
+    font-style: italic;
+    font-weight: 500;
+    margin-top: auto;
+    text-align: center;
+    padding: 0 1.6rem;
+}
+footer h3 {
+    font-size: 1rem;
+    font-style: bold;
+    font-weight: 300;
+    margin-top: auto;
+    text-align: center;
+    padding: 0 1.6rem;
+}
